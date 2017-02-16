@@ -5,5 +5,5 @@ coverage/
 .idea/
 run/
 .DS_Store
+._*
 *.swp
-

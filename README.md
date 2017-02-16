@@ -1,5 +1,7 @@
 # egg-watcher-vagrant
 
+File watcher plugin for egg watcher when in network file systems or other virtualization software
+
 [![NPM version][npm-image]][npm-url]
 [![build status][travis-image]][travis-url]
 [![Test coverage][codecov-image]][codecov-url]
@@ -20,9 +22,7 @@
 [download-image]: https://img.shields.io/npm/dm/egg-watcher-vagrant.svg?style=flat-square
 [download-url]: https://npmjs.org/package/egg-watcher-vagrant
 
-<!--
-Description here.
--->
+if you use some network file systems or other virtualization software, an use default watcher can't detected file change. you can use this plugin;
 
 ## Install
 
@@ -34,25 +34,29 @@ $ npm i egg-watcher-vagrant --save
 
 ```js
 // {app_root}/config/plugin.js
-exports.watcher-vagrant = {
+exports['watcher-vagrant'] = {
   enable: true,
   package: 'egg-watcher-vagrant',
 };
 ```
 
+if you just want use it in `local` evniroment, you just add this config to `${app_root}/config/plugin.local.js` file
+
 ## Configuration
+
+This plugin used [`chokidar`](https://github.com/paulmillr/chokidar) and you can pass `chokidar` options as following.
 
 ```js
 // {app_root}/config/config.default.js
-exports.watcher-vagrant = {
+exports['watcher-vagrant'] = {
+  vagrant: {
+    usePolling: true,
+    alwaysStat: true,
+  },
 };
 ```
 
-see [config/config.default.js](config/config.default.js) for more detail.
-
-## Example
-
-<!-- example here -->
+see [https://github.com/paulmillr/chokidar#api](https://github.com/paulmillr/chokidar#api) for more detail.
 
 ## Questions & Suggestions
 

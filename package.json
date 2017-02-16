@@ -3,20 +3,29 @@
   "version": "1.0.0",
   "description": "enhance egg-watcher with vagrant support",
   "eggPlugin": {
-    "name": "watcher-vagrant"
+    "name": "watcher-vagrant",
+    "dep": [
+      "watcher"
+    ]
   },
   "keywords": [
     "egg",
     "eggPlugin",
-    "egg-plugin"
+    "egg-plugin",
+    "egg-watcher"
   ],
-  "dependencies": {},
+  "dependencies": {
+    "chokidar": "^1.6.1",
+    "debug": "^2.6.1",
+    "sdk-base": "^3.0.1"
+  },
   "devDependencies": {
     "autod": "^2.7.1",
     "egg": "^0.7.0",
     "egg-bin": "^1.10.0",
     "egg-ci": "^1.1.0",
     "egg-mock": "^2.0.0",
+    "egg-watcher": "^2.0.0",
     "eslint": "^3.13.1",
     "eslint-config-egg": "^3.2.0",
     "supertest": "^2.0.1",
@@ -34,11 +43,7 @@
     "autod": "autod"
   },
   "files": [
-    "index.js",
-    "app.js",
-    "agent.js",
     "config",
-    "app",
     "lib"
   ],
   "ci": {
@@ -53,15 +58,5 @@
   },
   "homepage": "https://github.com/eggjs/egg-watcher-vagrant#readme",
   "author": "TZ <atian25@qq.com>",
-  "license": "MIT",
-  "boilerplate": {
-    "name": "egg-boilerplate-plugin",
-    "version": "1.7.0",
-    "description": "boilerplate for egg plugin",
-    "repository": {
-      "type": "git",
-      "url": "git@github.com:eggjs/egg-boilerplate-plugin.git"
-    },
-    "homepage": "https://github.com/eggjs/egg-boilerplate-plugin"
-  }
+  "license": "MIT"
 }
