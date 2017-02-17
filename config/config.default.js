@@ -11,8 +11,9 @@ exports.watcher = {
   eventSources: {
     chokidar: path.join(__dirname, '../lib/chokidar'),
   },
-  chokidar: {
-    usePolling: true,
-    alwaysStat: true,
-  },
+};
+
+exports.watcherChokidar = {
+  usePolling: true,
+  alwaysStat: true,
 };
