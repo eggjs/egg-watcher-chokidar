@@ -16,7 +16,6 @@ describe('test/vagrant.test.js', () => {
 
   before(done => {
     app = mm.cluster({
-      plugin: 'watcher',
       baseDir: 'apps/watcher-vagrant-app',
     });
     app.ready(done);
