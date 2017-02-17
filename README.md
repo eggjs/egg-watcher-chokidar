@@ -1,7 +1,5 @@
 # egg-watcher-vagrant
 
-File watcher plugin for egg watcher when in network file systems or other virtualization software
-
 [![NPM version][npm-image]][npm-url]
 [![build status][travis-image]][travis-url]
 [![Test coverage][codecov-image]][codecov-url]
@@ -34,7 +32,7 @@ $ npm i egg-watcher-vagrant --save
 
 ```js
 // {app_root}/config/plugin.js
-exports['watcher-vagrant'] = {
+exports.watcherVagrant = {
   enable: true,
   package: 'egg-watcher-vagrant',
 };
@@ -48,11 +46,9 @@ This plugin used [`chokidar`](https://github.com/paulmillr/chokidar) and you can
 
 ```js
 // {app_root}/config/config.default.js
-exports['watcher-vagrant'] = {
-  vagrant: {
-    usePolling: true,
-    alwaysStat: true,
-  },
+exports.watcherVagrant = {
+  usePolling: true,
+  alwaysStat: true,
 };
 ```
 
