@@ -1,4 +1,4 @@
-# egg-watcher-vagrant
+# egg-watcher-chokidar
 
 [![NPM version][npm-image]][npm-url]
 [![build status][travis-image]][travis-url]
@@ -7,34 +7,34 @@
 [![Known Vulnerabilities][snyk-image]][snyk-url]
 [![npm download][download-image]][download-url]
 
-[npm-image]: https://img.shields.io/npm/v/egg-watcher-vagrant.svg?style=flat-square
-[npm-url]: https://npmjs.org/package/egg-watcher-vagrant
-[travis-image]: https://img.shields.io/travis/eggjs/egg-watcher-vagrant.svg?style=flat-square
-[travis-url]: https://travis-ci.org/eggjs/egg-watcher-vagrant
-[codecov-image]: https://img.shields.io/codecov/c/github/eggjs/egg-watcher-vagrant.svg?style=flat-square
-[codecov-url]: https://codecov.io/github/eggjs/egg-watcher-vagrant?branch=master
-[david-image]: https://img.shields.io/david/eggjs/egg-watcher-vagrant.svg?style=flat-square
-[david-url]: https://david-dm.org/eggjs/egg-watcher-vagrant
-[snyk-image]: https://snyk.io/test/npm/egg-watcher-vagrant/badge.svg?style=flat-square
-[snyk-url]: https://snyk.io/test/npm/egg-watcher-vagrant
-[download-image]: https://img.shields.io/npm/dm/egg-watcher-vagrant.svg?style=flat-square
-[download-url]: https://npmjs.org/package/egg-watcher-vagrant
+[npm-image]: https://img.shields.io/npm/v/egg-watcher-chokidar.svg?style=flat-square
+[npm-url]: https://npmjs.org/package/egg-watcher-chokidar
+[travis-image]: https://img.shields.io/travis/eggjs/egg-watcher-chokidar.svg?style=flat-square
+[travis-url]: https://travis-ci.org/eggjs/egg-watcher-chokidar
+[codecov-image]: https://img.shields.io/codecov/c/github/eggjs/egg-watcher-chokidar.svg?style=flat-square
+[codecov-url]: https://codecov.io/github/eggjs/egg-watcher-chokidar?branch=master
+[david-image]: https://img.shields.io/david/eggjs/egg-watcher-chokidar.svg?style=flat-square
+[david-url]: https://david-dm.org/eggjs/egg-watcher-chokidar
+[snyk-image]: https://snyk.io/test/npm/egg-watcher-chokidar/badge.svg?style=flat-square
+[snyk-url]: https://snyk.io/test/npm/egg-watcher-chokidar
+[download-image]: https://img.shields.io/npm/dm/egg-watcher-chokidar.svg?style=flat-square
+[download-url]: https://npmjs.org/package/egg-watcher-chokidar
 
 if you use some network file systems or other virtualization software, an use default watcher can't detected file change. you can use this plugin;
 
 ## Install
 
 ```bash
-$ npm i egg-watcher-vagrant --save
+$ npm i egg-watcher-chokidar --save
 ```
 
 ## Usage
 
 ```js
 // {app_root}/config/plugin.js
-exports.watcherVagrant = {
+exports.watcherChokidar = {
   enable: true,
-  package: 'egg-watcher-vagrant',
+  package: 'egg-watcher-chokidar',
 };
 ```
 
@@ -46,7 +46,7 @@ This plugin used [`chokidar`](https://github.com/paulmillr/chokidar) and you can
 
 ```js
 // {app_root}/config/config.default.js
-exports.watcherVagrant = {
+exports.watcherChokidar = {
   usePolling: true,
   alwaysStat: true,
 };

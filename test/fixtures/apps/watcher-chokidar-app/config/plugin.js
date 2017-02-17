@@ -3,7 +3,7 @@
 const path = require('path');
 
 module.exports = {
-  'watcher-vagrant': {
+  watcherChokidar: {
     enable: true,
     path: path.join(__dirname, '../../../../../../../'),
   },

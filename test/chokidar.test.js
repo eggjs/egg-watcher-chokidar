@@ -7,16 +7,16 @@ const assert = require('assert');
 const sleep = require('ko-sleep');
 const request = require('supertest');
 
-const file_path1 = utils.getFilePath('apps/watcher-vagrant-app/tmp.txt');
-const file_path2 = utils.getFilePath('apps/watcher-vagrant-app/tmp/tmp.txt');
-const file_path1_agent = utils.getFilePath('apps/watcher-vagrant-app/tmp-agent.txt');
+const file_path1 = utils.getFilePath('apps/watcher-chokidar-app/tmp.txt');
+const file_path2 = utils.getFilePath('apps/watcher-chokidar-app/tmp/tmp.txt');
+const file_path1_agent = utils.getFilePath('apps/watcher-chokidar-app/tmp-agent.txt');
 
-describe('test/vagrant.test.js', () => {
+describe('test/chokidar.test.js', () => {
   let app;
 
   before(done => {
     app = mm.cluster({
-      baseDir: 'apps/watcher-vagrant-app',
+      baseDir: 'apps/watcher-chokidar-app',
     });
     app.ready(done);
   });

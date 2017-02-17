@@ -1,8 +1,8 @@
 'use strict';
 
 const utils = require('../../../../utils');
-const file_path1 = utils.getFilePath('apps/watcher-vagrant-app/tmp.txt');
-const dir_path = utils.getFilePath('apps/watcher-vagrant-app/tmp');
+const file_path1 = utils.getFilePath('apps/watcher-chokidar-app/tmp.txt');
+const dir_path = utils.getFilePath('apps/watcher-chokidar-app/tmp');
 
 module.exports = function(app) {
   let fileChangeCount = 0;

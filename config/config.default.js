@@ -9,6 +9,10 @@ const path = require('path');
  */
 exports.watcher = {
   eventSources: {
-    vagrant: path.join(__dirname, '../lib/vagrant'),
+    chokidar: path.join(__dirname, '../lib/chokidar'),
+  },
+  chokidar: {
+    usePolling: true,
+    alwaysStat: true,
   },
 };

@@ -3,5 +3,5 @@
 exports.env = 'local';
 
 exports.watcher = {
-  type: 'vagrant',
+  type: 'chokidar',
 };

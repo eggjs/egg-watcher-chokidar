@@ -1,9 +1,9 @@
 {
-  "name": "egg-watcher-vagrant",
+  "name": "egg-watcher-chokidar",
   "version": "1.0.0",
-  "description": "enhance egg-watcher with vagrant support",
+  "description": "enhance egg-watcher use chokidar",
   "eggPlugin": {
-    "name": "watcherVagrant",
+    "name": "watcherChokidar",
     "dep": [
       "watcher"
     ]
@@ -21,7 +21,7 @@
   },
   "devDependencies": {
     "autod": "^2.7.1",
-    "egg": "^0.7.0",
+    "egg": "^0.11.0",
     "egg-bin": "^1.10.0",
     "egg-ci": "^1.1.0",
     "egg-mock": "^2.0.0",
@@ -50,12 +50,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/eggjs/egg-watcher-vagrant.git"
+    "url": "git+https://github.com/eggjs/egg-watcher-chokidar.git"
   },
   "bugs": {
     "url": "https://github.com/eggjs/egg/issues"
   },
-  "homepage": "https://github.com/eggjs/egg-watcher-vagrant#readme",
+  "homepage": "https://github.com/eggjs/egg-watcher-chokidar#readme",
   "author": "AlphaTr <alphatr@alphatr.com>",
   "license": "MIT"
 }
