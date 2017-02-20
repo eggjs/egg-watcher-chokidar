@@ -18,7 +18,7 @@ describe('test/chokidar.test.js', () => {
     app = mm.cluster({
       baseDir: 'apps/watcher-chokidar-app',
     });
-    app.ready(done);
+    return app.ready(done);
   });
 
   after(() => app.close());
