@@ -4,8 +4,7 @@ const fs = require('fs');
 const mm = require('egg-mock');
 const utils = require('./utils');
 const assert = require('assert');
-const sleep = require('ko-sleep');
-const request = require('supertest');
+const sleep = require('mz-modules/sleep');
 
 const file_path1 = utils.getFilePath('apps/watcher-chokidar-app/tmp.txt');
 const file_path2 = utils.getFilePath('apps/watcher-chokidar-app/tmp/tmp.txt');
@@ -24,21 +23,20 @@ describe('test/chokidar.test.js', () => {
   after(() => app.close());
   afterEach(mm.restore);
 
-  it('should app watcher work', function* () {
-    const server = app.callback();
+  it('should app watcher work', async () => {
     let count = 0;
 
-    yield request(server)
+    await app.httpRequest()
       .get('/app-watch')
       .expect(200)
       .expect('app watch success');
 
 
-    yield sleep(100);
+    await sleep(100);
     fs.writeFileSync(file_path1, 'aaa');
-    yield sleep(100);
+    await sleep(100);
 
-    let res = yield request(server)
+    let res = await app.httpRequest()
       .get('/app-msg')
       .expect(200);
 
@@ -47,9 +45,9 @@ describe('test/chokidar.test.js', () => {
     assert(count > lastCount);
 
     fs.writeFileSync(file_path2, 'aaa');
-    yield sleep(100);
+    await sleep(100);
 
-    res = yield request(server)
+    res = await app.httpRequest()
       .get('/app-msg')
       .expect(200);
 
@@ -58,19 +56,19 @@ describe('test/chokidar.test.js', () => {
     assert(count > lastCount);
   });
 
-  it('should agent watcher work', function* () {
+  it('should agent watcher work', async () => {
     let count = 0;
 
-    yield request(app.callback())
+    await app.httpRequest()
       .get('/agent-watch')
       .expect(200)
       .expect('agent watch success');
 
-    yield sleep(100);
+    await sleep(100);
     fs.writeFileSync(file_path1_agent, 'bbb');
-    yield sleep(100);
+    await sleep(100);
 
-    const res = yield request(app.callback())
+    const res = await app.httpRequest()
       .get('/agent-msg')
       .expect(200);
 
