@@ -15,7 +15,7 @@
     "egg-watcher"
   ],
   "dependencies": {
-    "chokidar": "^2.0.2",
+    "chokidar": "^3.0.0",
     "debug": "^3.1.0",
     "sdk-base": "^3.4.0"
   },
