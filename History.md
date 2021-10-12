@@ -1,4 +1,10 @@
 
+2.1.0 / 2021-10-12
+==================
+
+**others**
+  * [[`92386c7`](http://github.com/eggjs/egg-watcher-chokidar/commit/92386c735f22f908abf578a5b1ed1676e629feff)] - dpes: update chokidar to 3.x (#6) (mansonchor.github.com <<mansonchor1987@gmail.com>>)
+
 2.0.0 / 2018-02-24
 ==================
 
